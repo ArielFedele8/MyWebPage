@@ -19,3 +19,15 @@
     background: #555; 
   }
 
+  footer{
+    background-color: #00A572;
+  }
+
+  footer>div{
+    color: white;
+  }
+  i{
+    font-size: 30px;
+    color: white;
+  }
+

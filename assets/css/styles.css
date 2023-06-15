@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-bold.woff) format('woff');
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 15px;
@@ -19,8 +25,9 @@
     background: #555; 
   }
 
-  footer{
-    background-color: #00A572;
+  .bg-green{
+    background-image: radial-gradient(circle,#00A572,#49b996);
+    /*background-image: linear-gradient(to bottom,#00A572,#65ddb7);*/
   }
 
   footer>div{
@@ -31,3 +38,13 @@
     color: white;
   }
 
+  header div.bg-image{
+    background-image: url(../img/istockphoto-1308684522-612x612.jpg);
+    background: linear-gradient(45deg, #3ca582, #71eec6);
+    height: 600px;
+  }
+
+  header h1{
+    font-family: 'Ostrich Sans';
+    color: rgb(202, 244, 255);
+  }

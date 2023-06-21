@@ -1,7 +1,16 @@
-
 @font-face {
   font-family: 'Ostrich Sans';
   src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-bold.woff) format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-inline-regular.woff) format('woff');
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* width */
@@ -33,18 +42,36 @@
   footer>div{
     color: white;
   }
+  
   i{
     font-size: 30px;
     color: white;
   }
 
   header div.bg-image{
-    background-image: url(../img/istockphoto-1308684522-612x612.jpg);
     background: linear-gradient(45deg, #3ca582, #71eec6);
     height: 600px;
   }
 
-  header h1{
-    font-family: 'Ostrich Sans';
+  header {
+    font-family: Ostrich Sans;
     color: rgb(202, 244, 255);
+  }
+
+  strong{
+    font-weight: 700;
+  }
+
+  .navbar {
+    min-height: 60px;
+    font-size: 26px;
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+  }
+
+  header .btn{
+    width: 70%;
+    
   }

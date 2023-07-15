@@ -62,9 +62,13 @@
     font-weight: 700;
   }
 
-  .navbar {
+  .navbar{
     min-height: 60px;
     font-size: 26px;
+  }
+
+  header> .container-fluid {
+    margin-top: 71px;
   }
 
   .navbar-brand {
@@ -74,4 +78,22 @@
   header .btn{
     width: 70%;
     
+  }
+
+  @media (max-width:549.99px) {
+    .btn {
+       font-size: 30px;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width:1142.99px) {
+    .btn {
+       font-size: 38px;
+    }
+  }
+  
+  @media (min-width:1143.00px) {
+  .btn {
+       font-size: 38px;
+    }
   }

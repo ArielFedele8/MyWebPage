@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Ostrich Sans';
+    src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-bold.woff) format('woff');
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  
+  @font-face {
+    font-family: 'Ostrich Sans';
+    src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-rounded.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+      width: 15px;
+    }
+  
+  ::-webkit-scrollbar-track {
+      background-color: #e7e7e7;
+      border: 1px solid #cacaca;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: rgb(176, 231, 176);
+  }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+  
+    .bg-green{
+      background-image: radial-gradient(circle,#00A572,#49b996);
+      /*background-image: linear-gradient(to bottom,#00A572,#65ddb7);*/
+    }
+  
+    footer>div{
+      color: white;
+    }
+    
+    i{
+      font-size: 30px;
+      color: white;
+    }
+  
+    header {
+      font-family: Ostrich Sans;
+      color: rgb(202, 244, 255);
+
+      .btn{
+        width: 70%;
+      }
+
+      div.bg-image{
+        background: linear-gradient(45deg, #3ca582, #71eec6);
+        height: 600px;
+      }
+
+      > .container-fluid {
+        margin-top: 71px;
+      }
+
+    }
+  
+    strong{
+      font-weight: 700;
+    }
+  
+    .navbar{
+      min-height: 60px;
+      font-size: 26px;
+    }
+  
+    .navbar-brand {
+      font-size: 30px;
+    }
+  
+  
+    @media (max-width:767.99px) {
+      .btn {
+         font-size: 30px;
+      }
+    }
+    
+    @media (min-width:768.00px) {
+    .btn {
+         font-size: 40px;
+      }
+    }

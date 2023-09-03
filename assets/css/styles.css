@@ -1,99 +1,161 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 @font-face {
-  font-family: 'Ostrich Sans';
-  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-bold.woff) format('woff');
+  font-family: "Ostrich Sans";
+  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-bold.woff) format("woff");
   font-style: normal;
   font-weight: 700;
 }
-
-
 @font-face {
-  font-family: 'Ostrich Sans';
-  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-rounded.woff) format('woff');
+  font-family: "Ostrich Sans";
+  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-rounded.woff) format("woff");
   font-style: normal;
   font-weight: 400;
+}
+::-webkit-scrollbar-track {
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(176, 231, 176);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
-  }
-
-::-webkit-scrollbar-track {
-    background-color: #e7e7e7;
-    border: 1px solid #cacaca;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  width: 15px;
 }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgb(176, 231, 176);
+body {
+  overflow-x: hidden;
 }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
 
-  .bg-green{
-    background-image: radial-gradient(circle,#00A572,#49b996);
-    /*background-image: linear-gradient(to bottom,#00A572,#65ddb7);*/
-  }
+.bg-green {
+  background-image: url(../img/istockphoto-1093097896-170667a.jpg);
+}
 
-  footer>div{
-    color: white;
-  }
-  
-  i{
-    font-size: 30px;
-    color: white;
-  }
+.bg-white {
+  background-image: url(../img/sfondobianco.jpg);
+}
 
-  header div.bg-image{
-    background: linear-gradient(45deg, #3ca582, #71eec6);
-    height: 600px;
-  }
+i {
+  font-size: 30px;
+  color: white;
+}
 
-  header {
-    font-family: Ostrich Sans;
-    color: rgb(202, 244, 255);
-  }
+strong {
+  font-weight: 700;
+}
 
-  strong{
-    font-weight: 700;
-  }
+.bg-green {
+  background-image: url(../img/istockphoto-1093097896-170667a.jpg);
+}
 
-  .navbar{
-    min-height: 60px;
-    font-size: 26px;
-  }
+header {
+  font-family: Ostrich Sans;
+  color: rgb(202, 244, 255);
+}
+header .navbar {
+  min-height: 65px;
+  max-width: 100vw;
+  font-size: 26px;
+}
+header div .btn {
+  width: 70%;
+  height: 50%;
+  text-align: center;
+}
+header div .btn-one {
+  color: #D4AF37;
+  transition: all 0.3s;
+  position: relative;
+}
+header div .btn-one span {
+  transition: all 0.3s;
+}
+header div .btn-one::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(212, 175, 55, 0.5);
+  border-bottom-color: rgba(212, 175, 55, 0.5);
+  transform: scale(0.1, 1);
+}
+header div .btn-one:hover span {
+  letter-spacing: 2px;
+}
+header div .btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+header div .btn-one::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+header div .btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+header > .container-fluid {
+  margin-top: 7vh;
+  height: 93vh;
+}
 
-  header> .container-fluid {
-    margin-top: 71px;
-  }
+main {
+  font-family: Ostrich Sans;
+}
+main p {
+  font-size: 25px;
+}
+main #AboutMe {
+  height: 93vh;
+}
+main #AboutMe ul {
+  width: 230px;
+}
+main .carousel-inner > .item > img, main .carousel-inner > .item > a > img {
+  width: 100%;
+}
 
-  .navbar-brand {
-    font-size: 30px;
-  }
+footer div {
+  color: white;
+}
 
-  header .btn{
-    width: 70%;
-    
-  }
-
-  @media (max-width:549.99px) {
-    .btn {
-       font-size: 30px;
-    }
-  }
-
-  @media (min-width: 550px) and (max-width:1142.99px) {
-    .btn {
-       font-size: 38px;
-    }
-  }
-  
-  @media (min-width:1143.00px) {
+@media (max-width: 549.99px) {
   .btn {
-       font-size: 38px;
-    }
+    font-size: 30px;
   }
+}
+@media (min-width: 550px) and (max-width: 1142.99px) {
+  .btn {
+    font-size: 38px;
+  }
+}
+@media (min-width: 1143px) {
+  .btn {
+    font-size: 38px;
+  }
+}/*# sourceMappingURL=styles.css.map */

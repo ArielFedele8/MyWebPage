@@ -3,21 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Serve per essere responsive
+      width = device-width imposta la larghezza della pagina in modo che segua la larghezza dello schermo del dispositivo
+      initial-scale=1.0 imposta il livello di zoom iniziale
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ariel Fedele</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
   <body>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/script.js"></script>
     <header>
       <div class="container">
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-green">
@@ -129,7 +135,7 @@
             <h1>About me</h1>
           </div>
         </div>
-        <div class="row mx-sm-5 mx-1">
+        <div class="row mx-md-5 mx-sm-3 mx-1">
           <div class="col-lg-8 col-md-7">
             <h2>Chi sono</h2>
             <p>
@@ -137,20 +143,48 @@
               presso l'università di Pisa. Prima di terminare gli studi sto
               approfondendo il mondo del full-stack web development, da cui sono
               particolarmente attratto. Sono inoltre appassionato di stampa e
-              modellazione 3D, con la quale mi cimento a creare svariati progetti.
+              modellazione 3D, con la quale mi cimento a creare svariati
+              progetti.
             </p>
-            <ul class="justify-content-between list-unstyled d-flex">
-              <li>Skills</li>
-              <li>Educazione</li>
-              <li>Esperienza</li>
-            </ul>
+
+            <div class="tab">
+              <p
+                class="tablinks"
+                onclick="openTab(event, 'skills')"
+                id="defaultOpen"
+              >
+                Skills
+              </p>
+              <p class="tablinks" onclick="openTab(event, 'educazione')">
+                Educazione
+              </p>
+              <p class="tablinks" onclick="openTab(event, 'esperienza')">
+                Esperienza
+              </p>
+            </div>
+            <div id="skills" class="tabcontent">
+              <h3>Tu pa</h3>
+              <p>Tu pa è veramente un cane</p>
+            </div>
+            <div id="educazione" class="tabcontent">
+              <h3>Tu ma</h3>
+              <p>Tu ma è veramente un cane</p>
+            </div>
+            <div id="esperienza" class="tabcontent">
+              <h3>Tu zio</h3>
+              <p>Tu zio è veramente un cane</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-5 col-xs-3 justify-content-center d-flex">
-            <img src="/assets/img/Foto-primo-piano.jpg" class="img-fluid my-auto">
+            <img src="/assets/img/Scan_0001.jpg" class="img-fluid my-auto" />
           </div>
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
       </div>
+      <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+      </script>
       <div class="row justify-content-center bg-green">
         <div class="col-6 text-center">
           <h1>Projects</h1>

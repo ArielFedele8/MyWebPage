@@ -1,20 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
-
-@font-face {
-  font-family: "Ostrich Sans";
-  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-bold.woff)
-    format("woff");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Ostrich Sans";
-  src: url(../fonts/ostrich-sans-master/ostrich-sans-master/webfonts/ostrich-sans-rounded.woff)
-    format("woff");
-  font-style: normal;
-  font-weight: 400;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap') ; 
 
 //Scroll-bar
 ::-webkit-scrollbar-track {
@@ -38,12 +22,11 @@
   width: 15px;
 }
 
-
-body{
-  overflow-x: hidden; 
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 400;
 }
-
-
 
 .bg-green {
   background-image: url(../img/istockphoto-1093097896-170667a.jpg);
@@ -67,9 +50,7 @@ strong {
 }
 
 header {
-  font-family: Ostrich Sans;
   color: rgb(202, 244, 255);
-  
 
   .navbar {
     min-height: 65px;
@@ -78,15 +59,15 @@ header {
   }
 
   //BOTTONE
-  div{
+  div {
     .btn {
-    width: 70%;
-    height: 50%;
-    text-align: center;
+      width: 70%;
+      height: 50%;
+      text-align: center;
     }
 
     .btn-one {
-      color: #D4AF37;
+      color: #d4af37;
       transition: all 0.3s;
       position: relative;
     }
@@ -94,7 +75,7 @@ header {
       transition: all 0.3s;
     }
     .btn-one::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -107,19 +88,19 @@ header {
       border-bottom-width: 1px;
       border-top-style: solid;
       border-bottom-style: solid;
-      border-top-color: rgba(212,175,55,0.5);
-      border-bottom-color: rgba(212,175,55,0.5);
+      border-top-color: rgba(212, 175, 55, 0.5);
+      border-bottom-color: rgba(212, 175, 55, 0.5);
       transform: scale(0.1, 1);
     }
     .btn-one:hover span {
       letter-spacing: 2px;
     }
     .btn-one:hover::before {
-      opacity: 1; 
-      transform: scale(1, 1); 
+      opacity: 1;
+      transform: scale(1, 1);
     }
     .btn-one::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -127,10 +108,10 @@ header {
       height: 100%;
       z-index: 1;
       transition: all 0.3s;
-      background-color: rgba(255,255,255,0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
     .btn-one:hover::after {
-      opacity: 0; 
+      opacity: 0;
       transform: scale(0.1, 1);
     }
   }
@@ -141,25 +122,68 @@ header {
   }
 }
 
-main{
-  font-family: Ostrich Sans;
+main {
 
-  p{
+  p {
     font-size: 25px;
   }
 
-  #AboutMe{
+  #AboutMe {
     height: 93vh;
 
-    img{
+    p {
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
     }
 
-    ul{
-      width: 230px
+    img {
+      max-width: 200px;
+      border-radius: 60%;
     }
+
+    /* Style the tab */
+
+    .tab {
+      display: flex;
+      margin: 20px 0 20px;
+
+      .tablinks {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+      }
+  
+      .tablinks::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+      }
+  
+      .tablinks:hover::after {
+        width: 100%;
+      }
+    }
+
+    h3 {
+      color: #ff004f;
+      font-size: 25px;
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+
   }
 
-  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
     width: 100%;
   }
 }
@@ -169,8 +193,6 @@ footer {
     color: white;
   }
 }
-
-
 
 @media (max-width: 549.99px) {
   .btn {

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap') ; 
 
+$coloreSfondo: FFF;
+
 //Scroll-bar
 ::-webkit-scrollbar-track {
   background-color: #e7e7e7;
@@ -129,7 +131,10 @@ main {
   }
 
   #AboutMe {
-    height: 93vh;
+
+    @media (min-width: 800px) {
+      height: 93vh;
+    }
 
     p {
       @media (max-width: 575px) {

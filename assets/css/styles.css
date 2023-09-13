@@ -117,8 +117,12 @@ main p {
   font-size: 25px;
 }
 main #AboutMe {
-  height: 93vh;
   /* Style the tab */
+}
+@media (min-width: 800px) {
+  main #AboutMe {
+    height: 93vh;
+  }
 }
 @media (max-width: 575px) {
   main #AboutMe p {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap') ; 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap");
 
 $coloreSfondo: FFF;
 
@@ -26,7 +26,7 @@ $coloreSfondo: FFF;
 
 body {
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
@@ -53,6 +53,10 @@ strong {
 
 header {
   color: rgb(202, 244, 255);
+
+  @media (max-width: 991px) {
+    height: auto;
+  }
 
   .navbar {
     min-height: 65px;
@@ -125,81 +129,98 @@ header {
 }
 
 main {
-
-  p {
-    font-size: 25px;
-  }
+  font-size: 25px;
 
   #AboutMe {
 
-    @media (min-width: 800px) {
-      height: 93vh;
+    height: 93vh;
+
+    @media (max-width: 991px) {
+      height: auto;
     }
 
-    p {
-      @media (max-width: 575px) {
-        font-size: 16px;
-      }
+    @media (max-width: 600px) {
+      font-size: 20px;
     }
 
-    img {
-      max-width: 200px;
-      border-radius: 60%;
+    @media (max-width: 400px) {
+      font-size: 16px;
     }
 
-    /* Style the tab */
-
-    .tab {
-      display: flex;
-      margin: 20px 0 20px;
-
-      .tablinks {
-        margin-right: 50px;
-        font-size: 18px;
-        font-weight: 400;
-        cursor: pointer;
-        position: relative;
-      }
-  
-      .tablinks::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0.1em;
-        background-color: #ff004f;
-        transition: opacity 0.5s, transform 0.5s;
-        opacity: 0;
-      }
-  
-      .tablinks:hover::after, .tablinks:focus::after {
-        opacity: 1;
-        //trasla in basso di 0.2m
-        transform: translate3d(0, 0.2em, 0);
-      }
-
-      .active::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0.1em;
-        background-color: #ff004f;
-        opacity: 1;
-        transform: translate3d(0, 0.2em, 0);
-      }
+    h3,
+    h2 {
+      color: #ff004f;
     }
 
     h3 {
-      color: #ff004f;
       font-size: 25px;
       @media (max-width: 575px) {
         font-size: 16px;
       }
     }
 
+    /* Style the tab */
+
+    .tab {
+      
+      display: flex;
+      margin: 20px 0 20px;
+
+      .tablinks {
+
+        @media (min-width: 1213px) {
+          margin-right: 50px;
+        }
+  
+        @media (min-width: 992px) and (max-width: 1212px ) {
+          margin-right: 4vw;
+        }
+
+        @media (max-width: 991px) {
+          margin-right: 50px;
+        }
+
+        @media (max-width: 440px) {
+          margin-right: 10vw;
+        }
+        
+        font-size: 0.8em;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: #ff004f;
+          transition: opacity 0.5s, transform 0.5s;
+          opacity: 0;
+        }
+
+        &:hover::after,
+        &:focus::after {
+          opacity: 1;
+          //trasla in basso di 0.2m
+          transform: translate3d(0, 0.2em, 0);
+        }
+
+        &.active::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: #ff004f;
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+      }
+    }
   }
 
   .carousel-inner > .item > img,

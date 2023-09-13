@@ -2,12 +2,12 @@
 ::-webkit-scrollbar-track {
   background-color: #e7e7e7;
   border: 1px solid #cacaca;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px black;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: rgb(176, 231, 176);
+  background-color: #b0e7b0;
 }
 
 /* Handle on hover */
@@ -21,9 +21,13 @@
 }
 
 body {
-  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  background-color: #0f0f0f;
+}
+
+body p, body h1 {
+  color: white;
 }
 
 .bg-green {
@@ -48,31 +52,37 @@ strong {
 }
 
 header {
-  color: rgb(202, 244, 255);
+  color: #caf4ff;
 }
+
 @media (max-width: 991px) {
   header {
     height: auto;
   }
 }
+
 header .navbar {
   min-height: 65px;
   max-width: 100vw;
   font-size: 26px;
 }
+
 header div .btn {
   width: 70%;
   height: 50%;
   text-align: center;
 }
+
 header div .btn-one {
   color: #d4af37;
   transition: all 0.3s;
   position: relative;
 }
+
 header div .btn-one span {
   transition: all 0.3s;
 }
+
 header div .btn-one::before {
   content: "";
   position: absolute;
@@ -91,13 +101,16 @@ header div .btn-one::before {
   border-bottom-color: rgba(212, 175, 55, 0.5);
   transform: scale(0.1, 1);
 }
+
 header div .btn-one:hover span {
   letter-spacing: 2px;
 }
+
 header div .btn-one:hover::before {
   opacity: 1;
   transform: scale(1, 1);
 }
+
 header div .btn-one::after {
   content: "";
   position: absolute;
@@ -109,10 +122,12 @@ header div .btn-one::after {
   transition: all 0.3s;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 header div .btn-one:hover::after {
   opacity: 0;
   transform: scale(0.1, 1);
 }
+
 header > .container-fluid {
   margin-top: 7vh;
   height: 93vh;
@@ -121,67 +136,81 @@ header > .container-fluid {
 main {
   font-size: 25px;
 }
+
 main #AboutMe {
   height: 93vh;
   /* Style the tab */
 }
+
 @media (max-width: 991px) {
   main #AboutMe {
     height: auto;
   }
 }
+
 @media (max-width: 600px) {
   main #AboutMe {
     font-size: 20px;
   }
 }
+
 @media (max-width: 400px) {
   main #AboutMe {
     font-size: 16px;
   }
 }
+
 main #AboutMe h3,
 main #AboutMe h2 {
-  color: #ff004f;
+  color: #d4af37;
 }
+
 main #AboutMe h3 {
   font-size: 25px;
 }
+
 @media (max-width: 575px) {
   main #AboutMe h3 {
     font-size: 16px;
   }
 }
+
 main #AboutMe .tab {
   display: flex;
   margin: 20px 0 20px;
 }
+
 main #AboutMe .tab .tablinks {
   font-size: 0.8em;
   font-weight: 400;
   cursor: pointer;
   position: relative;
 }
+
 @media (min-width: 1213px) {
   main #AboutMe .tab .tablinks {
     margin-right: 50px;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1212px) {
   main #AboutMe .tab .tablinks {
     margin-right: 4vw;
   }
 }
+
 @media (max-width: 991px) {
   main #AboutMe .tab .tablinks {
     margin-right: 50px;
   }
 }
+
 @media (max-width: 440px) {
   main #AboutMe .tab .tablinks {
     margin-right: 10vw;
   }
 }
+
 main #AboutMe .tab .tablinks::after {
   content: "";
   position: absolute;
@@ -189,14 +218,16 @@ main #AboutMe .tab .tablinks::after {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: #ff004f;
+  background-color: #d4af37;
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
 }
+
 main #AboutMe .tab .tablinks:hover::after, main #AboutMe .tab .tablinks:focus::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
+
 main #AboutMe .tab .tablinks.active::after {
   content: "";
   position: absolute;
@@ -204,10 +235,11 @@ main #AboutMe .tab .tablinks.active::after {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: #ff004f;
+  background-color: #d4af37;
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
+
 main .carousel-inner > .item > img,
 main .carousel-inner > .item > a > img {
   width: 100%;
@@ -222,13 +254,15 @@ footer div {
     font-size: 30px;
   }
 }
+
 @media (min-width: 550px) and (max-width: 1142.99px) {
   .btn {
     font-size: 38px;
   }
 }
+
 @media (min-width: 1143px) {
   .btn {
     font-size: 38px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

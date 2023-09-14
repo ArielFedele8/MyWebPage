@@ -121,8 +121,11 @@ function cursore() {
 }
 
 function start(){
+  if (window.screen.width > 780) {
+    cursore();
+  }
   cliccaSkills();
-  cursore();
+  
 }
 
 window.onload = start;

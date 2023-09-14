@@ -68,6 +68,13 @@ strong {
 
 header h1 {
   font-size: 40px;
+  display: block;
+}
+
+header h2 {
+  display: block;
+  text-align: center;
+  width: 80% !important;
 }
 
 header .typing {

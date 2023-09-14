@@ -120,8 +120,10 @@ function cursore() {
   initCanvas();
 }
 
+var pippo;
+
 function start(){
-  if (window.screen.width > 780) {
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     cursore();
   }
   cliccaSkills();

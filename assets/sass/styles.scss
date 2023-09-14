@@ -85,8 +85,14 @@ strong {
 header {
 
   h1{
-    
     font-size: 40px;
+    display: block;
+  }
+
+  h2{
+    display: block;
+    text-align: center;
+    width: 80% !important; 
   }
   
   // Typing style

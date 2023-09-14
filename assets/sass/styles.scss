@@ -1,25 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap');
 
-$coloreSfondo: rgb(15,15,15);
+$bg: rgb(15, 15, 15);
 $coloreScrittePrimo: #d4af37;
 $coloreScritteSecondo: white;
 
+$text-length: 17;
+$animation-time: 4s;
+
 //Scroll-bar
 ::-webkit-scrollbar-track {
-  background-color: $coloreSfondo;
+  background-color: $bg;
   border: none;
   box-shadow: inset 0 0 6px rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: $coloreScrittePrimo
-;
+  background-color: $coloreScrittePrimo;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $coloreSfondo;
+  background: $bg;
 }
 
 /* width */
@@ -28,38 +30,43 @@ $coloreScritteSecondo: white;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif, monospace;
   font-weight: 400;
-  background-color: $coloreSfondo;
-  cursor: none;
+  background-color: $bg;
   color: $coloreScritteSecondo;
+  cursor: none;
+
+  @media (pointer: none){
+    .cursor{
+      display: none;
+    }
+  }
 
   //cursore animato
-  .cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-
-  }
+  @media (pointer: fine){
+    .cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
   
-  .cursor--small {
-    width: 5px;
-    height: 5px;
-    left: -2.5px;
-    top: -2.5px;
-    border-radius: 50%;
-    z-index: 11000;
-    background: $coloreScrittePrimo
-  ;
-  }
+    .cursor--small {
+      width: 5px;
+      height: 5px;
+      left: -2.5px;
+      top: -2.5px;
+      border-radius: 50%;
+      z-index: 11000;
+      background: $coloreScrittePrimo;
+    }
   
-  .cursor--canvas {
-    width: 100vw;
-    height: 100vh;
-    z-index: 12000;
+    .cursor--canvas {
+      width: 100vw;
+      height: 100vh;
+      z-index: 12000;
+    }
   }
-  
 
   p,
   h1 {
@@ -77,6 +84,33 @@ strong {
 }
 
 header {
+  // Typing style
+  .typing {
+    font-family: 'Ubuntu', monospace;
+    width: fit-content;
+    position: relative;
+    &::after {
+      content: "|";
+      position: absolute;
+      right: 0;
+      width: 100%;
+      color: white;
+      background: $bg;
+      animation: typing $animation-time steps($text-length) forwards,
+        caret 1s infinite;
+    }
+  }
+  // Animation
+  @keyframes typing {
+    to {
+      width: 0;
+    }
+  }
+  @keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
 
   @media only screen and (max-width: 991px) {
     height: auto;
@@ -88,8 +122,6 @@ header {
     font-size: 26px;
   }
 
-
-
   //BOTTONE
   div {
     .btn {
@@ -97,7 +129,7 @@ header {
       height: 50%;
       text-align: center;
 
-      &:hover{
+      &:hover {
         cursor: none;
       }
     }
@@ -178,8 +210,7 @@ main {
 
     h3,
     h2 {
-      color: $coloreScrittePrimo
-    ;
+      color: $coloreScrittePrimo;
     }
 
     h3 {
@@ -223,8 +254,7 @@ main {
           left: 0;
           width: 100%;
           height: 0.1em;
-          background-color: $coloreScrittePrimo
-        ;
+          background-color: $coloreScrittePrimo;
           transition: opacity 0.5s, transform 0.5s;
           opacity: 0;
         }
@@ -243,8 +273,7 @@ main {
           left: 0;
           width: 100%;
           height: 0.1em;
-          background-color: $coloreScrittePrimo
-        ;
+          background-color: $coloreScrittePrimo;
           opacity: 1;
           transform: translate3d(0, 0.2em, 0);
         }

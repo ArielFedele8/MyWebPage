@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap");
 ::-webkit-scrollbar-track {
   background-color: rgb(15, 15, 15);
   border: none;
@@ -21,31 +21,38 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif, monospace;
   font-weight: 400;
   background-color: rgb(15, 15, 15);
-  cursor: none;
   color: white;
+  cursor: none;
 }
-body .cursor {
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
+@media (pointer: none) {
+  body .cursor {
+    display: none;
+  }
 }
-body .cursor--small {
-  width: 5px;
-  height: 5px;
-  left: -2.5px;
-  top: -2.5px;
-  border-radius: 50%;
-  z-index: 11000;
-  background: #d4af37;
-}
-body .cursor--canvas {
-  width: 100vw;
-  height: 100vh;
-  z-index: 12000;
+@media (pointer: fine) {
+  body .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  body .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: #d4af37;
+  }
+  body .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }
 }
 body p,
 body h1 {
@@ -61,6 +68,30 @@ strong {
   font-weight: 700;
 }
 
+header .typing {
+  font-family: "Ubuntu", monospace;
+  width: fit-content;
+  position: relative;
+}
+header .typing::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  color: white;
+  background: rgb(15, 15, 15);
+  animation: typing 4s steps(17) forwards, caret 1s infinite;
+}
+@keyframes typing {
+  to {
+    width: 0;
+  }
+}
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
 @media only screen and (max-width: 991px) {
   header {
     height: auto;

@@ -23,10 +23,17 @@
 
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script src="assets/js/script.js"></script>
+    
+    <!-- The cursor elements --> 
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+
     <header>
       <div class="container">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-green">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"> Ariel Fedele</a>
             <button
@@ -91,13 +98,12 @@
           </div>
         </nav>
       </div>
-      <div class="container-fluid bg-green">
+      <div class="container-fluid ">
         <div class="row" style="height: 60%">
           <h1
-            class="mt-auto display-1"
-            style="text-align: center; padding-top: 10vh"
+            class="mt-auto mx-auto px-0 display-1 typing"
           >
-            CIAO, SONO ARIEL !
+            CIAO, SONO ARIEL!
           </h1>
           <h2
             class="mb-auto mx-auto display-6"
@@ -129,7 +135,7 @@
       </div>
     </header>
     <main>
-      <div class="container-fluid bg-white" id="AboutMe">
+      <div class="container-fluid " id="AboutMe">
         <div class="row justify-content-center py-5">
           <div class="col-6 text-center">
             <h1>About me</h1>
@@ -193,11 +199,7 @@
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
       </div>
-      <script>
-        //Cerca l'id defaultOpen e "clicca" quell'elemento
-        document.getElementById("defaultOpen").click();
-      </script>
-      <div class="container-fluid bg-green">
+      <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-6 text-center">
             <h1>Projects</h1>
@@ -278,11 +280,11 @@
           </div>
         </div>
       </div>
-      
+
       <br /><br /><br />
     </main>
     <!-- Footer -->
-    <footer class="py-5 bg-green">
+    <footer class="py-5 ">
       <div class="container-fluid">
         <div class="row d-flex justify-content-center">
           <ul
@@ -302,11 +304,14 @@
             </li>
           </ul>
         </div>
+<<<<<<< HEAD
         <!-- Copyright -->
         <div class="footer-copyright text-center mt-3">
           © 2023 Copyright: Ariel Fedele
         </div>
         <!-- Copyright -->
+=======
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
       </div>
     </footer>
   </body>

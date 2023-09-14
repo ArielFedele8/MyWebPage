@@ -1,18 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap");
 ::-webkit-scrollbar-track {
-  background-color: #e7e7e7;
-  border: 1px solid #cacaca;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(15, 15, 15);
+  border: none;
+  box-shadow: inset 0 0 6px rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
+<<<<<<< HEAD
   background-color: #b0e7b0;
+=======
+  background-color: #d4af37;
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(15, 15, 15);
 }
 
 /* width */
@@ -21,16 +25,46 @@
 }
 
 body {
+<<<<<<< HEAD
   font-family: "Poppins", sans-serif;
+=======
+  font-family: "Poppins", sans-serif, monospace;
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   font-weight: 400;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  cursor: none;
 }
-
-.bg-green {
-  background-image: url(../img/istockphoto-1093097896-170667a.jpg);
+@media (pointer: none) {
+  body .cursor {
+    display: none;
+  }
 }
-
-.bg-white {
-  background-image: url(../img/sfondobianco.jpg);
+@media (pointer: fine) {
+  body .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  body .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: #d4af37;
+  }
+  body .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }
+}
+body p,
+body h1 {
+  color: white;
 }
 
 i {
@@ -42,15 +76,40 @@ strong {
   font-weight: 700;
 }
 
-.bg-green {
-  background-image: url(../img/istockphoto-1093097896-170667a.jpg);
+header .typing {
+  font-family: "Ubuntu", monospace;
+  width: fit-content;
+  position: relative;
 }
+<<<<<<< HEAD
 
 header {
   color: #caf4ff;
 }
 
 @media (max-width: 991px) {
+=======
+header .typing::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  color: white;
+  background: rgb(15, 15, 15);
+  animation: typing 4s steps(17) forwards, caret 1s infinite;
+}
+@keyframes typing {
+  to {
+    width: 0;
+  }
+}
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+@media only screen and (max-width: 991px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   header {
     height: auto;
   }
@@ -67,7 +126,13 @@ header div .btn {
   height: 50%;
   text-align: center;
 }
+<<<<<<< HEAD
 
+=======
+header div .btn:hover {
+  cursor: none;
+}
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
 header div .btn-one {
   color: #d4af37;
   transition: all 0.3s;
@@ -136,20 +201,32 @@ main #AboutMe {
   height: 93vh;
   /* Style the tab */
 }
+<<<<<<< HEAD
 
 @media (max-width: 991px) {
+=======
+@media only screen and (max-width: 991px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe {
     height: auto;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 600px) {
+=======
+@media only screen and (max-width: 600px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe {
     font-size: 20px;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 400px) {
+=======
+@media only screen and (max-width: 400px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe {
     font-size: 16px;
   }
@@ -157,14 +234,18 @@ main #AboutMe {
 
 main #AboutMe h3,
 main #AboutMe h2 {
-  color: #ff004f;
+  color: #d4af37;
 }
 
 main #AboutMe h3 {
   font-size: 25px;
 }
+<<<<<<< HEAD
 
 @media (max-width: 575px) {
+=======
+@media only screen and (max-width: 575px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe h3 {
     font-size: 16px;
   }
@@ -178,29 +259,44 @@ main #AboutMe .tab {
 main #AboutMe .tab .tablinks {
   font-size: 0.8em;
   font-weight: 400;
-  cursor: pointer;
   position: relative;
 }
+<<<<<<< HEAD
 
 @media (min-width: 1213px) {
+=======
+@media only screen and (min-width: 1213px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe .tab .tablinks {
     margin-right: 50px;
   }
 }
+<<<<<<< HEAD
 
 @media (min-width: 992px) and (max-width: 1212px) {
+=======
+@media only screen and (min-width: 992px) and (max-width: 1212px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe .tab .tablinks {
     margin-right: 4vw;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 991px) {
+=======
+@media only screen and (max-width: 991px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe .tab .tablinks {
     margin-right: 50px;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 440px) {
+=======
+@media only screen and (max-width: 440px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   main #AboutMe .tab .tablinks {
     margin-right: 10vw;
   }
@@ -213,7 +309,7 @@ main #AboutMe .tab .tablinks::after {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: #ff004f;
+  background-color: #d4af37;
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
 }
@@ -230,7 +326,7 @@ main #AboutMe .tab .tablinks.active::after {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: #ff004f;
+  background-color: #d4af37;
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
@@ -244,19 +340,27 @@ footer div {
   color: white;
 }
 
-@media (max-width: 549.99px) {
+@media only screen and (max-width: 549.99px) {
   .btn {
     font-size: 30px;
   }
 }
+<<<<<<< HEAD
 
 @media (min-width: 550px) and (max-width: 1142.99px) {
+=======
+@media only screen and (min-width: 550px) and (max-width: 1142.99px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   .btn {
     font-size: 38px;
   }
 }
+<<<<<<< HEAD
 
 @media (min-width: 1143px) {
+=======
+@media only screen and (min-width: 1143px) {
+>>>>>>> eb8d0285f6b97d8a29352023ea99880ff8d8b7b8
   .btn {
     font-size: 38px;
   }

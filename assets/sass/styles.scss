@@ -1,22 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=UnifrakturMaguntia&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap');
 
-$coloreSfondo: FFF;
+$bg: rgb(15, 15, 15);
+$coloreScrittePrimo: #d4af37;
+$coloreScritteSecondo: white;
+
+$text-length: 17;
+$animation-time: 4s;
 
 //Scroll-bar
 ::-webkit-scrollbar-track {
-  background-color: #e7e7e7;
-  border: 1px solid #cacaca;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $bg;
+  border: none;
+  box-shadow: inset 0 0 6px rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: rgb(176, 231, 176);
+  background-color: $coloreScrittePrimo;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: $bg;
 }
 
 /* width */
@@ -25,16 +30,48 @@ $coloreSfondo: FFF;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif, monospace;
   font-weight: 400;
-}
+  background-color: $bg;
+  color: $coloreScritteSecondo;
+  cursor: none;
 
-.bg-green {
-  background-image: url(../img/istockphoto-1093097896-170667a.jpg);
-}
+  @media (pointer: none){
+    .cursor{
+      display: none;
+    }
+  }
 
-.bg-white {
-  background-image: url(../img/sfondobianco.jpg);
+  //cursore animato
+  @media (pointer: fine){
+    .cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  
+    .cursor--small {
+      width: 5px;
+      height: 5px;
+      left: -2.5px;
+      top: -2.5px;
+      border-radius: 50%;
+      z-index: 11000;
+      background: $coloreScrittePrimo;
+    }
+  
+    .cursor--canvas {
+      width: 100vw;
+      height: 100vh;
+      z-index: 12000;
+    }
+  }
+
+  p,
+  h1 {
+    color: white;
+  }
 }
 
 i {
@@ -46,14 +83,36 @@ strong {
   font-weight: 700;
 }
 
-.bg-green {
-  background-image: url(../img/istockphoto-1093097896-170667a.jpg);
-}
-
 header {
-  color: rgb(202, 244, 255);
+  // Typing style
+  .typing {
+    font-family: 'Ubuntu', monospace;
+    width: fit-content;
+    position: relative;
+    &::after {
+      content: "|";
+      position: absolute;
+      right: 0;
+      width: 100%;
+      color: white;
+      background: $bg;
+      animation: typing $animation-time steps($text-length) forwards,
+        caret 1s infinite;
+    }
+  }
+  // Animation
+  @keyframes typing {
+    to {
+      width: 0;
+    }
+  }
+  @keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
 
-  @media (max-width: 991px) {
+  @media only screen and (max-width: 991px) {
     height: auto;
   }
 
@@ -69,6 +128,10 @@ header {
       width: 70%;
       height: 50%;
       text-align: center;
+
+      &:hover {
+        cursor: none;
+      }
     }
 
     .btn-one {
@@ -133,26 +196,26 @@ main {
   #AboutMe {
     height: 93vh;
 
-    @media (max-width: 991px) {
+    @media only screen and (max-width: 991px) {
       height: auto;
     }
 
-    @media (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       font-size: 20px;
     }
 
-    @media (max-width: 400px) {
+    @media only screen and (max-width: 400px) {
       font-size: 16px;
     }
 
     h3,
     h2 {
-      color: #ff004f;
+      color: $coloreScrittePrimo;
     }
 
     h3 {
       font-size: 25px;
-      @media (max-width: 575px) {
+      @media only screen and (max-width: 575px) {
         font-size: 16px;
       }
     }
@@ -164,25 +227,24 @@ main {
       margin: 20px 0 20px;
 
       .tablinks {
-        @media (min-width: 1213px) {
+        @media only screen and (min-width: 1213px) {
           margin-right: 50px;
         }
 
-        @media (min-width: 992px) and (max-width: 1212px) {
+        @media only screen and (min-width: 992px) and (max-width: 1212px) {
           margin-right: 4vw;
         }
 
-        @media (max-width: 991px) {
+        @media only screen and (max-width: 991px) {
           margin-right: 50px;
         }
 
-        @media (max-width: 440px) {
+        @media only screen and (max-width: 440px) {
           margin-right: 10vw;
         }
 
         font-size: 0.8em;
         font-weight: 400;
-        cursor: pointer;
         position: relative;
 
         &::after {
@@ -192,7 +254,7 @@ main {
           left: 0;
           width: 100%;
           height: 0.1em;
-          background-color: #ff004f;
+          background-color: $coloreScrittePrimo;
           transition: opacity 0.5s, transform 0.5s;
           opacity: 0;
         }
@@ -211,7 +273,7 @@ main {
           left: 0;
           width: 100%;
           height: 0.1em;
-          background-color: #ff004f;
+          background-color: $coloreScrittePrimo;
           opacity: 1;
           transform: translate3d(0, 0.2em, 0);
         }
@@ -231,20 +293,20 @@ footer {
   }
 }
 
-@media (max-width: 549.99px) {
+@media only screen and (max-width: 549.99px) {
   .btn {
     font-size: 30px;
   }
 }
 
-@media (min-width: 550px) and (max-width: 1142.99px) {
+@media only screen and (min-width: 550px) and (max-width: 1142.99px) {
   .btn {
     font-size: 38px;
   }
 }
 
-//da rivedere perché per ora uguale alla media query prima
-@media (min-width: 1143px) {
+//da rivedere perché per ora uguale alla media only screen and query prima
+@media only screen and (min-width: 1143px) {
   .btn {
     font-size: 38px;
   }

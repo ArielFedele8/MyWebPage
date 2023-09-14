@@ -4,6 +4,8 @@ $bg: rgb(15, 15, 15);
 $coloreScrittePrimo: #d4af37;
 $coloreScritteSecondo: white;
 
+//#FF004F
+
 $text-length: 17;
 $animation-time: 4s;
 
@@ -30,6 +32,7 @@ $animation-time: 4s;
 }
 
 body {
+
   font-family: "Poppins", sans-serif, monospace;
   font-weight: 400;
   background-color: $bg;
@@ -58,7 +61,7 @@ body {
       top: -2.5px;
       border-radius: 50%;
       z-index: 11000;
-      background: $coloreScrittePrimo;
+      background: transparent;
     }
   
     .cursor--canvas {
@@ -68,10 +71,6 @@ body {
     }
   }
 
-  p,
-  h1 {
-    color: white;
-  }
 }
 
 i {
@@ -84,6 +83,12 @@ strong {
 }
 
 header {
+
+  h1{
+    
+    font-size: 40px;
+  }
+  
   // Typing style
   .typing {
     font-family: 'Ubuntu', monospace;
@@ -120,6 +125,7 @@ header {
     min-height: 65px;
     max-width: 100vw;
     font-size: 26px;
+    background-color: rgb(15, 15, 15);
   }
 
   //BOTTONE
@@ -129,9 +135,7 @@ header {
       height: 50%;
       text-align: center;
 
-      &:hover {
-        cursor: none;
-      }
+      
     }
 
     .btn-one {

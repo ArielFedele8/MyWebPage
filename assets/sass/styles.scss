@@ -30,7 +30,8 @@ body {
   font-weight: 400;
   background-color: rgb(15, 15, 15);
 
-  p, h1{
+  p,
+  h1 {
     color: white;
   }
 }
@@ -68,6 +69,8 @@ header {
     max-width: 100vw;
     font-size: 26px;
   }
+
+
 
   //BOTTONE
   div {
@@ -137,7 +140,6 @@ main {
   font-size: 25px;
 
   #AboutMe {
-
     height: 93vh;
 
     @media (max-width: 991px) {
@@ -167,17 +169,15 @@ main {
     /* Style the tab */
 
     .tab {
-      
       display: flex;
       margin: 20px 0 20px;
 
       .tablinks {
-
         @media (min-width: 1213px) {
           margin-right: 50px;
         }
-  
-        @media (min-width: 992px) and (max-width: 1212px ) {
+
+        @media (min-width: 992px) and (max-width: 1212px) {
           margin-right: 4vw;
         }
 
@@ -188,7 +188,7 @@ main {
         @media (max-width: 440px) {
           margin-right: 10vw;
         }
-        
+
         font-size: 0.8em;
         font-weight: 400;
         cursor: pointer;

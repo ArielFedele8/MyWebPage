@@ -1,3 +1,4 @@
+
 function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -18,3 +19,12 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
+  function cliccaSkills(){
+    //Cerca l'id defaultOpen e "clicca" quell'elemento
+    document.getElementById("defaultOpen").click();
+  }
+
+  //Clicca la tab skills quando si apre il sito
+  window.onload = cliccaSkills;
+  

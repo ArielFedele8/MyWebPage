@@ -221,9 +221,10 @@ main #AboutMe {
   /* Style the tab */
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px), (max-height: 890px) {
   main #AboutMe {
     height: auto;
+    min-height: 93vh;
   }
 }
 
@@ -264,6 +265,7 @@ main #AboutMe .tab .tablinks {
   font-size: 0.8em;
   font-weight: 400;
   position: relative;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1213px) {
@@ -317,6 +319,10 @@ main #AboutMe .tab .tablinks.active::after {
   background-color: #d4af37;
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
+}
+
+main #AboutMe .tab #terzoTab {
+  margin-right: 0px;
 }
 
 main .carousel-inner > .item > img,

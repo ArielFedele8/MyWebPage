@@ -251,8 +251,9 @@ main {
   #AboutMe {
     height: 93vh;
 
-    @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: 991px), (max-height: 890px) {
       height: auto;
+      min-height: 93vh;
     }
 
     @media only screen and (max-width: 600px) {
@@ -263,6 +264,8 @@ main {
       font-size: 16px;
       padding: 0px;
     }
+
+    
 
     h3,
     h2 {
@@ -297,11 +300,13 @@ main {
 
         @media only screen and (max-width: 440px) {
           margin-right: 9vw;
+
         }
 
         font-size: 0.8em;
         font-weight: 400;
         position: relative;
+        cursor: pointer;
 
         &::after {
           content: "";
@@ -333,6 +338,10 @@ main {
           opacity: 1;
           transform: translate3d(0, 0.2em, 0);
         }
+      }
+
+      #terzoTab{
+        margin-right: 0px;
       }
     }
   }

@@ -39,7 +39,7 @@ body {
   color: $coloreScritteSecondo;
   cursor: none;
 
-  @media (pointer: none){
+  @media (pointer: none), (pointer: coarse){
     .cursor{
       display: none;
     }

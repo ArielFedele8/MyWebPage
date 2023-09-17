@@ -108,7 +108,7 @@ header h3 {
 }
 
 header .typing {
-  font-family: 'Ubuntu', monospace;
+  font-family: "Ubuntu", monospace;
   width: fit-content;
   position: relative;
 }
@@ -328,6 +328,24 @@ main #AboutMe .tab #terzoTab {
 main .carousel-inner > .item > img,
 main .carousel-inner > .item > a > img {
   width: 100%;
+}
+
+@media (min-width: 576px) {
+  main #Projects .container-fluid {
+    max-width: 510px;
+  }
+}
+
+@media (min-width: 768px) {
+  main #Projects .container-fluid {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  main #Projects .container-fluid {
+    max-width: 960px;
+  }
 }
 
 footer div {

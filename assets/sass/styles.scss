@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap");
 
 $bg: rgb(15, 15, 15);
 $coloreScrittePrimo: #d4af37;
@@ -32,28 +32,27 @@ $animation-time: 4s;
 }
 
 body {
-
   font-family: "Poppins", sans-serif, monospace;
   font-weight: 400;
   background-color: $bg;
   color: $coloreScritteSecondo;
   cursor: none;
 
-  @media (pointer: none), (pointer: coarse){
-    .cursor{
+  @media (pointer: none), (pointer: coarse) {
+    .cursor {
       display: none;
     }
   }
 
   //cursore animato
-  @media (pointer: fine){
+  @media (pointer: fine) {
     .cursor {
       position: fixed;
       left: 0;
       top: 0;
       pointer-events: none;
     }
-  
+
     .cursor--small {
       width: 5px;
       height: 5px;
@@ -63,14 +62,13 @@ body {
       z-index: 11000;
       background: transparent;
     }
-  
+
     .cursor--canvas {
       width: 100vw;
       height: 100vh;
       z-index: 12000;
     }
   }
-
 }
 
 i {
@@ -83,49 +81,39 @@ strong {
 }
 
 header {
-
   @media only screen and (min-width: 992px) {
-
-    .row{
+    .row {
       height: 30%;
     }
 
-    #buttons{
+    #buttons {
       margin-bottom: 10%;
     }
 
-    
-  h1{
-    font-size: 5vw;
-  }
+    h1 {
+      font-size: 5vw;
+    }
   }
 
-  @media only screen and (max-width: 992px), (max-height: 420px){
-
-    #title{
+  @media only screen and (max-width: 992px), (max-height: 420px) {
+    #title {
       height: 30%;
     }
 
-    #buttons{
+    #buttons {
       margin-top: 5vh;
       height: 30vh;
     }
-
-    
   }
 
-
   @media only screen and (max-width: 280px), (max-height: 420px) {
-
-    h1{
+    h1 {
       font-size: 20px;
     }
 
-    h3{
+    h3 {
       font-size: 16px;
     }
-
-    
   }
 
   > .container-fluid {
@@ -133,16 +121,14 @@ header {
     margin-top: 7vh;
   }
 
-
-
-  h3{
+  h3 {
     display: block;
     text-align: center;
   }
-  
+
   // Typing style
   .typing {
-    font-family: 'Ubuntu', monospace;
+    font-family: "Ubuntu", monospace;
     width: fit-content;
     position: relative;
     &::after {
@@ -152,8 +138,7 @@ header {
       width: 100%;
       color: white;
       background: $bg;
-      animation: typing $animation-time steps($text-length) forwards,
-        caret 1s infinite;
+      animation: typing $animation-time steps($text-length) forwards, caret 1s infinite;
     }
   }
   // Animation
@@ -167,7 +152,6 @@ header {
       color: transparent;
     }
   }
-
 
   .navbar {
     min-height: 7vh;
@@ -184,13 +168,11 @@ header {
       text-align: center;
       font-size: 24px;
       max-height: 140px;
-      
-      @media only screen and (max-width: 260px), (max-height: 420px){
+
+      @media only screen and (max-width: 260px), (max-height: 420px) {
         font-size: 16px;
         margin-top: 5vh;
       }
-      
-      
     }
 
     .btn-one {
@@ -242,7 +224,6 @@ header {
       transform: scale(0.1, 1);
     }
   }
-
 }
 
 main {
@@ -264,8 +245,6 @@ main {
       font-size: 16px;
       padding: 0px;
     }
-
-    
 
     h3,
     h2 {
@@ -300,7 +279,6 @@ main {
 
         @media only screen and (max-width: 440px) {
           margin-right: 9vw;
-
         }
 
         font-size: 0.8em;
@@ -340,7 +318,7 @@ main {
         }
       }
 
-      #terzoTab{
+      #terzoTab {
         margin-right: 0px;
       }
     }
@@ -349,6 +327,20 @@ main {
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
     width: 100%;
+  }
+
+  #Projects {
+    .container-fluid{
+      @media (min-width: 576px){
+        max-width: 510px;
+      }
+      @media (min-width: 768px){
+        max-width: 720px;
+      }
+      @media (min-width: 992px){
+        max-width: 960px;
+      }
+    }
   }
 }
 

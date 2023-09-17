@@ -1,310 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Serve per essere responsive
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Serve per essere responsive
       width = device-width imposta la larghezza della pagina in modo che segua la larghezza dello schermo del dispositivo
       initial-scale=1.0 imposta il livello di zoom iniziale
     -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ariel Fedele</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariel Fedele</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
 
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    
-    <!-- The cursor elements --> 
-    <div class="cursor cursor--small"></div>
-    <canvas class="cursor cursor--canvas" resize></canvas>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script src="assets/js/script.js"></script>
 
-    <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"> Ariel Fedele</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item mx-4">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item mx-4">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown mx-4">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item mx-4">
-                  <a
-                    class="nav-link disabled"
-                    href="#"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Disabled</a
-                  >
-                </li>
-              </ul>
-            </div>
+  <!-- The cursor elements -->
+  <div class="cursor cursor--small"></div>
+  <canvas class="cursor cursor--canvas" resize></canvas>
+
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> Ariel Fedele</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item mx-4">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown mx-4">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid ">
+      <div class="row d-flex justify-content-center" id="title">
+        <h1 class="mt-auto mx-auto px-0 typing">
+          CIAO, SONO ARIEL!
+        </h1>
       </div>
-      <div class="container-fluid ">
-        <div class="row d-flex justify-content-center" id="title">
-          <h1
-            class="mt-auto mx-auto px-0 typing"
-          >
-            CIAO, SONO ARIEL!
-          </h1>
-        </div>
-        <div class="row mt-3 d-flex justify-content-center">
-          <h3
-            class="mb-auto px-3 px-sm-5"
-          >
-            Sono uno studente di ingegneria informatica presso l'universita di
-            pisa
-          </h3>
-        </div>
-        <div class="row" id="buttons">
-          <!-- d-none d-xl-block serve per nasconderla quando diventa col-6 col-6 
+      <div class="row mt-3 d-flex justify-content-center">
+        <h3 class="mb-auto px-3 px-sm-5">
+          Sono uno studente di ingegneria informatica presso l'universita di
+          pisa
+        </h3>
+      </div>
+      <div class="row" id="buttons">
+        <!-- d-none d-xl-block serve per nasconderla quando diventa col-6 col-6 
                altrimenti compare come row sopra ai bottoni e li "schiaccia",
                rendendoli più bassi
           -->
-          <div class="col-xl-1 d-none d-xl-block"></div>
-          <div class="d-flex col-xl-5 col-sm-6 justify-content-center">
-            <button type="button" class="btn btn-one" onclick="window.location.href='#AboutMe'">
-              <span>About me</span>
-            </button>
-          </div>
-          <div class="d-flex mt-3 mt-sm-0 col-xl-5 col-sm-6 justify-content-center" onclick="window.location.href='#Projects'">
-            <button type="button" class="btn btn-one">
-              <span>My projects</span>
-            </button>
-          </div>
-          <div class="col-xl-1 d-none d-xl-block"></div>
+        <div class="col-xl-1 d-none d-xl-block"></div>
+        <div class="d-flex col-xl-5 col-sm-6 justify-content-center">
+          <button type="button" class="btn btn-one" onclick="window.location.href='#AboutMe'">
+            <span>About me</span>
+          </button>
+        </div>
+        <div class="d-flex mt-3 mt-sm-0 col-xl-5 col-sm-6 justify-content-center"
+          onclick="window.location.href='#Projects'">
+          <button type="button" class="btn btn-one">
+            <span>My projects</span>
+          </button>
+        </div>
+        <div class="col-xl-1 d-none d-xl-block"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container-fluid " id="AboutMe">
+      <div class="row justify-content-center py-5">
+        <div class="text-center">
+          <h1>About me</h1>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="container-fluid " id="AboutMe">
-        <div class="row justify-content-center py-5">
-          <div class="text-center">
-            <h1>About me</h1>
-          </div>
+      <div class="row mx-md-5 mx-sm-3 mx-1 ">
+        <div class="col-xs-6 col-lg-7 pe-lg-4" id="ChiSono">
+          <h2>Chi sono</h2>
+          <p>
+            Ciao sono Ariel, studente al terzo anno di ingegneria informatica
+            presso l'università di Pisa. <br> Prima di terminare gli studi sto
+            approfondendo il mondo del full-stack web development, da cui sono
+            particolarmente attratto. Sono inoltre appassionato di stampa e
+            modellazione 3D, con la quale mi cimento a creare svariati
+            progetti.
+          </p>
         </div>
-        <div class="row mx-md-5 mx-sm-3 mx-1 ">
-          <div class="col-xs-6 col-lg-7 pe-lg-4" id="ChiSono">
-            <h2>Chi sono</h2>
-            <p>
-              Ciao sono Ariel, studente al terzo anno di ingegneria informatica
-              presso l'università di Pisa. <br> Prima di terminare gli studi sto
-              approfondendo il mondo del full-stack web development, da cui sono
-              particolarmente attratto. Sono inoltre appassionato di stampa e
-              modellazione 3D, con la quale mi cimento a creare svariati
-              progetti.
+        <div class="col-xs-6 col-lg-5 ps-lg-4">
+          <div class="tab">
+            <p class="tablinks" onclick="openTab(event, 'skills')" id="defaultOpen">
+              Skills
+            </p>
+            <p class="tablinks" onclick="openTab(event, 'educazione')">
+              Educazione
+            </p>
+            <p class="tablinks" onclick="openTab(event, 'esperienza')" id="terzoTab">
+              Esperienza
             </p>
           </div>
-          <div class="col-xs-6 col-lg-5 ps-lg-4">
-            <div class="tab">
-              <p
-                class="tablinks"
-                onclick="openTab(event, 'skills')"
-                id="defaultOpen"
-              >
-                Skills
-              </p>
-              <p class="tablinks" onclick="openTab(event, 'educazione')">
-                Educazione
-              </p>
-              <p class="tablinks" onclick="openTab(event, 'esperienza')" id="terzoTab">
-                Esperienza
-              </p>
-            </div>
-            <div id="skills" class="tabcontent">
-              <h3>Web</h3>
-              <p>HTML-CSS-JS-BOOTSRAP-MYSQL-PHP-SEO</p>
-              <h3>3D</h3>
-              <p>CANVA-TINKERCAD</p>
-              <h3>Mobile</h3>
-              <p>ANDROID STUDIO</p>
-              <h3>Coding</h3>
-              <p>C-C++-JAVA-VS CODE-PROCESSING-GIT</p>
-              <h3>OS</h3>
-              <p>MAC-WINDOWS-LINUX-ASSEMBLY</p>
-              
-            </div>
-            <div id="educazione" class="tabcontent">
-              <h3>I.T.T. "S.Fedi-E.Fermi"</h3>
-              <p>Diploma di perito informatico | settembre 2016 - luglio 2021 <br>
-                Voto: 86/100</p>
-              <h3>Università di Pisa</h3>
-              <p>laurea triennale in Ingegneria dell'Informazione | settembre 2021 - in corso</p>
-              <h3>Start2Impact University</h3>
-              <p>Master in Full Stack Development | marzo 2023 - in corso</p>
-            </div>
-            <div id="esperienza" class="tabcontent">
-              <h3>Da inserire</h3>
-              <p>Esperienza da inserire</p>
-            </div>
-          </div>
-        </div>
-        <br /><br /><br /><br /><br /><br /><br /><br />
-      </div>
-      <div class="container-fluid" id="Projects">
-        <div class="row justify-content-center">
-          <div class="col-6 text-center">
-            <h1>Projects</h1>
-            <br /><br /><br /><br /><br />
-            <div class="col-8 mx-auto">
-              <div id="carouselExample" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="https://picsum.photos/900/600"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="https://picsum.photos/900/600"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="https://picsum.photos/900/600"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div id="skills" class="tabcontent">
+            <h3>Web</h3>
+            <p>HTML-CSS-JS-BOOTSRAP-MYSQL-PHP-SEO</p>
+            <h3>3D</h3>
+            <p>CANVA-TINKERCAD</p>
+            <h3>Mobile</h3>
+            <p>ANDROID STUDIO</p>
+            <h3>Coding</h3>
+            <p>C-C++-JAVA-VS CODE-PROCESSING-GIT</p>
+            <h3>OS</h3>
+            <p>MAC-WINDOWS-LINUX-ASSEMBLY</p>
 
-      <br /><br /><br />
-    </main>
-    <!-- Footer -->
-    <footer class="py-5 ">
-      <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
-          <ul
-            class="col-lg-4 col-md-6 col-8 justify-content-between list-unstyled d-flex"
-          >
-            <li>
-              <a href=""><i class="bi bi-envelope-at"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="bi bi-github fa-2x"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="bi bi-instagram fa-2x"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="bi bi-linkedin fa-2x"></i></a>
-            </li>
-          </ul>
+          </div>
+          <div id="educazione" class="tabcontent">
+            <h3>I.T.T. "S.Fedi-E.Fermi"</h3>
+            <p>Diploma di perito informatico | settembre 2016 - luglio 2021 <br>
+              Voto: 86/100</p>
+            <h3>Università di Pisa</h3>
+            <p>laurea triennale in Ingegneria dell'Informazione | settembre 2021 - in corso</p>
+            <h3>Start2Impact University</h3>
+            <p>Master in Full Stack Development | marzo 2023 - in corso</p>
+          </div>
+          <div id="esperienza" class="tabcontent">
+            <h3>Da inserire</h3>
+            <p>Esperienza da inserire</p>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+    <div class="container-fluid" id="Projects">
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <h1>Projects</h1>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2 ">
+              <img src="https://picsum.photos/600/600" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2 ">
+              <img src="https://picsum.photos/600/600" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2 ">
+              <img src="https://picsum.photos/600/600" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2 ">
+              <img src="https://picsum.photos/600/600" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br /><br /><br />
+  </main>
+  <!-- Footer -->
+  <footer class="py-5 ">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <ul class="col-lg-4 col-md-6 col-8 justify-content-between list-unstyled d-flex">
+          <li>
+            <a href=""><i class="bi bi-envelope-at"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="bi bi-github fa-2x"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="bi bi-instagram fa-2x"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="bi bi-linkedin fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

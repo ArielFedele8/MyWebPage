@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu+Mono&display=swap");
 
 $bg: rgb(15, 15, 15);
-$coloreScrittePrimo: #d4af37;
+$coloreScrittePrimo: #0f8852;
+//d4af37
 $coloreScritteSecondo: white;
 
 //#FF004F
@@ -173,10 +174,14 @@ header {
         font-size: 16px;
         margin-top: 5vh;
       }
+
+      @media only screen and (min-width: 992px){
+        font-size: 32px;
+      }
     }
 
     .btn-one {
-      color: #d4af37;
+      color: $coloreScrittePrimo;
       transition: all 0.3s;
       position: relative;
     }
@@ -197,8 +202,8 @@ header {
       border-bottom-width: 1px;
       border-top-style: solid;
       border-bottom-style: solid;
-      border-top-color: rgba(212, 175, 55, 0.5);
-      border-bottom-color: rgba(212, 175, 55, 0.5);
+      border-top-color: rgba($coloreScrittePrimo, 0.5);
+      border-bottom-color: rgba($coloreScrittePrimo, 0.5);
       transform: scale(0.1, 1);
     }
     .btn-one:hover span {

@@ -139,7 +139,8 @@ header {
       width: 100%;
       color: white;
       background: $bg;
-      animation: typing $animation-time steps($text-length) forwards, caret 1s infinite;
+      animation: typing $animation-time steps($text-length) forwards,
+        caret 1s infinite;
     }
   }
   // Animation
@@ -175,7 +176,7 @@ header {
         margin-top: 5vh;
       }
 
-      @media only screen and (min-width: 992px){
+      @media only screen and (min-width: 992px) {
         font-size: 32px;
       }
     }
@@ -335,19 +336,74 @@ main {
   }
 
   #Projects {
-    .container-fluid{
-      @media (min-width: 576px){
+
+    .container-fluid {
+      @media (min-width: 576px) {
         max-width: 510px;
       }
-      @media (min-width: 768px){
+      @media (min-width: 768px) {
         max-width: 720px;
       }
-      @media (min-width: 992px){
+      @media (min-width: 992px) {
         max-width: 960px;
       }
     }
 
     
+    .work-box {
+      margin-bottom: 3rem;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      background-color: #fff;
+    }
+
+    .work-box:hover img {
+      transform: scale(1.3);
+    }
+
+    .work-img {
+      display: block;
+      overflow: hidden;
+    }
+
+    .work-img img {
+      transition: all 1s;
+    }
+
+    .work-content {
+      padding: 2rem 3% 1rem 4%;
+
+      h2{
+        color: $coloreScrittePrimo;
+      }
+    }
+
+    .work-content .w-more {
+      color: #4e4e4e;
+      font-size: 0.8rem;
+    }
+
+    .work-content .w-more .w-ctegory {
+      color: #0078ff;
+    }
+
+    .work-content .w-like {
+      font-size: 2.5rem;
+      color: #0078ff;
+      float: right;
+    }
+
+    .work-content .w-like a {
+      color: #0078ff;
+    }
+
+    .work-content .w-like .num-like {
+      font-size: 0.7rem;
+    }
+
+    .w-title {
+      font-size: 1.2rem;
+    }
   }
 }
 

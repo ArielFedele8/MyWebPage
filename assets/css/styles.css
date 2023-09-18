@@ -311,6 +311,49 @@ main .carousel-inner > .item > a > img {
     max-width: 960px;
   }
 }
+main #Projects .work-box {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+main #Projects .work-box:hover img {
+  transform: scale(1.3);
+}
+main #Projects .work-img {
+  display: block;
+  overflow: hidden;
+}
+main #Projects .work-img img {
+  transition: all 1s;
+}
+main #Projects .work-content {
+  padding: 2rem 3% 1rem 4%;
+}
+main #Projects .work-content h2 {
+  color: #0f8852;
+}
+main #Projects .work-content .w-more {
+  color: #4e4e4e;
+  font-size: 0.8rem;
+}
+main #Projects .work-content .w-more .w-ctegory {
+  color: #0078ff;
+}
+main #Projects .work-content .w-like {
+  font-size: 2.5rem;
+  color: #0078ff;
+  float: right;
+}
+main #Projects .work-content .w-like a {
+  color: #0078ff;
+}
+main #Projects .work-content .w-like .num-like {
+  font-size: 0.7rem;
+}
+main #Projects .w-title {
+  font-size: 1.2rem;
+}
 
 footer div {
   color: white;

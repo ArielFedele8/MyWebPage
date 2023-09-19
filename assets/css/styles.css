@@ -130,6 +130,9 @@ header .navbar {
   font-size: 20px;
   background-color: rgb(15, 15, 15);
 }
+header .navbar a {
+  color: #0f8852;
+}
 header div .btn {
   width: 70%;
   height: 50%;
@@ -291,6 +294,58 @@ main #AboutMe .tab .tablinks.active::after {
 }
 main #AboutMe .tab #terzoTab {
   margin-right: 0px;
+}
+main #AboutMe .btn-one {
+  color: #0f8852;
+  transition: all 0.3s;
+  position: relative;
+}
+main #AboutMe .btn-one span {
+  transition: all 0.3s;
+  font-size: 0.8em;
+}
+main #AboutMe .btn-one::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(15, 136, 82, 0.5);
+  border-bottom-color: rgba(15, 136, 82, 0.5);
+  transform: scale(0.1, 1);
+}
+main #AboutMe .btn-one:hover span {
+  letter-spacing: 2px;
+}
+main #AboutMe .btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+main #AboutMe .btn-one::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main #AboutMe .btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+main #AboutMe i {
+  color: #0f8852;
 }
 main .carousel-inner > .item > img,
 main .carousel-inner > .item > a > img {

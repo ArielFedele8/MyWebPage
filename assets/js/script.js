@@ -19,6 +19,20 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+function openNav(evt) {
+  // Declare all variables
+  var i, navlinks;
+
+  //Cerca e toglie active da nav-link attivo
+  navlinks = document.getElementsByClassName("nav-link");
+  for (i = 0; i < navlinks.length; i++) {
+    navlinks[i].className = navlinks[i].className.replace(" active", "");
+  }
+
+  //aggiunge active al nav-link cliccato
+  evt.currentTarget.className += " active";
+}
+
 function cliccaSkills() {
   //Cerca l'id defaultOpen e "clicca" quell'elemento
   document.getElementById("defaultOpen").click();
@@ -68,7 +82,7 @@ function cursore() {
       height: 75,
     };
     paper.setup(canvas);
-    const strokeColor = "rgba(212, 175, 55, 0.5)";
+    const strokeColor = "rgba(15, 136, 82, 0.5)";
     const strokeWidth = 1;
     const segments = 8;
     const radius = 20;

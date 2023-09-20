@@ -473,7 +473,7 @@ footer {
 
 
 .form-body {
-  height: 100%;
+  height: auto;
   overflow: hidden;
   cursor: default;
   
@@ -498,15 +498,20 @@ footer {
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-    padding: 60px;
   }
 
   .form-content .form-items {
-    border: 3px solid #fff;
+    border: 3px solid $coloreScrittePrimo;
     padding: 40px;
+    padding-bottom: 0px;
     display: inline-block;
     width: 100%;
-    min-width: 540px;
+
+    @media screen and (min-width: 660px) and ((min-height: 520px)){
+      min-width: 540px;
+      padding: 40px;
+    }
+    
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -515,16 +520,26 @@ footer {
     transition: all 0.4s ease;
   }
 
+  .form-content {
+    @media screen and (max-width: 660px), (max-height: 520px) {
+      padding-top: 0px;
+    }
+  }
+
+  
+
   .form-content h3 {
     color: #fff;
     text-align: left;
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 5px;
+    color: $coloreScrittePrimo;
   }
 
   .form-content h3.form-title {
     margin-bottom: 30px;
+    
   }
 
   .form-content p {
@@ -581,24 +596,6 @@ footer {
     box-shadow: none;
   }
 
-  .form-content textarea {
-    position: static !important;
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 6px;
-    text-align: left;
-    background-color: #fff;
-    border: 0;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8d8d8d;
-    outline: none;
-    resize: none;
-    height: 120px;
-    -webkit-transition: none;
-    transition: none;
-    margin-bottom: 14px;
-  }
 
   .form-content textarea:hover,
   .form-content textarea:focus {

@@ -10,13 +10,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- OG tags-->
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://arielfedele8.github.io/MyWebPage/"/>
-    <meta property="og:title" content="Ariel Fedele"/>
-    <meta property="og:image" content="https://github.com/ArielFedele8/MyWebPage/blob/main/assets/img/Scan_0001.jpg"/>
-
+    <!-- HTML Meta Tags -->
     <title>Ariel Fedele</title>
+    <meta name="description" content="Ciao sono Ariel, qui ci sono dettagli su di me ed i miei lavori" />
+
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://arielfedele8.github.io/MyWebPage/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ariel Fedele" />
+    <meta property="og:description" content="Ciao sono Ariel, qui ci sono dettagli su di me ed i miei lavori" />
+    <meta
+      property="og:image"
+      content="https://github.com/ArielFedele8/MyWebPage/blob/dev/assets/img/Scan_0001.jpg"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="arielfedele8.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://arielfedele8.github.io/MyWebPage/"
+    />
+    <meta name="twitter:title" content="Ariel Fedele" />
+    <meta name="twitter:description" content="Ciao sono Ariel, qui ci sono dettagli su di me ed i miei lavori" />
+    <meta
+      name="twitter:image"
+      content="https://github.com/ArielFedele8/MyWebPage/blob/dev/assets/img/Scan_0001.jpg"
+    />
+
+    <!-- CSS Bootsrap e Bootstrap icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,6 +50,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+
+    <!-- CSS mio -->
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
@@ -34,7 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <!-- The cursor elements -->
+    <!-- Elementi del cursore -->
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
 
@@ -60,36 +87,67 @@
             >
               <ul class="navbar-nav">
                 <li class="nav-item mx-4">
-                  <a class="nav-link active" aria-current="page" href="" onclick="openNav(event)"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href=""
+                    onclick="openNav(event)"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#AboutMe" onclick="openNav(event)">Su di me</a>
+                  <a class="nav-link" href="#AboutMe" onclick="openNav(event)"
+                    >Su di me</a
+                  >
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#Projects" onclick="openNav(event)">Progetti</a>
+                  <a class="nav-link" href="#Projects" onclick="openNav(event)"
+                    >Progetti</a
+                  >
                 </li>
                 <li class="nav-item dropdown mx-4">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     Contattami
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="form.html" target="_blank">Email</a>
+                      <a class="dropdown-item" href="form.html" target="_blank"
+                        >Email</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="https://www.linkedin.com/in/ariel-fedele-a118b1268/" target="_blank">LinkedIn</a>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.linkedin.com/in/ariel-fedele-a118b1268/"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="https://github.com/ArielFedele8" target="_blank">GitHub</a>
+                      <a
+                        class="dropdown-item"
+                        href="https://github.com/ArielFedele8"
+                        target="_blank"
+                        >GitHub</a
+                      >
                     </li>
                     <li>
                       <hr class="dropdown-divider" />
                     </li>
                     <li>
-                      <a class="dropdown-item" href="https://www.instagram.com/_ariel_fedele/" target="_blank">Instagram</a>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.instagram.com/_ariel_fedele/"
+                        target="_blank"
+                        >Instagram</a
+                      >
                     </li>
                   </ul>
                 </li>
@@ -379,21 +437,30 @@
             class="col-lg-4 col-md-6 col-8 justify-content-between list-unstyled d-flex"
           >
             <li>
-              <a href="form.html" target="_blank"><i class="bi bi-envelope-at"></i></a>
+              <a href="form.html" target="_blank"
+                ><i class="bi bi-envelope-at"></i
+              ></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/ariel-fedele-a118b1268/" target="_blank"><i class="bi bi-linkedin fa-2x"></i></a>
+              <a
+                href="https://www.linkedin.com/in/ariel-fedele-a118b1268/"
+                target="_blank"
+                ><i class="bi bi-linkedin fa-2x"></i
+              ></a>
             </li>
             <li>
-              <a href="https://github.com/ArielFedele8" target="_blank"><i class="bi bi-github fa-2x"></i></a>
+              <a href="https://github.com/ArielFedele8" target="_blank"
+                ><i class="bi bi-github fa-2x"></i
+              ></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/_ariel_fedele/" target="_blank"><i class="bi bi-instagram fa-2x"></i></a>
+              <a href="https://www.instagram.com/_ariel_fedele/" target="_blank"
+                ><i class="bi bi-instagram fa-2x"></i
+              ></a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-    
   </body>
 </html>

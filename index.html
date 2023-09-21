@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <!-- Serve per essere responsive
       width = device-width imposta la larghezza della pagina in modo che segua la larghezza dello schermo del dispositivo
       initial-scale=1.0 imposta il livello di zoom iniziale
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- HTML Meta Tags -->
     <title>Ariel Fedele</title>
+    <meta name="description" content="Ciao sono Ariel, qui ci sono dettagli su di me ed i miei lavori" />
+
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://arielfedele8.github.io/MyWebPage/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ariel Fedele" />
+    <meta property="og:description" content="Ciao sono Ariel, qui ci sono dettagli su di me ed i miei lavori" />
+    <meta
+      property="og:image"
+      content="https://github.com/ArielFedele8/MyWebPage/blob/dev/assets/img/og_pic.PNG?raw=true"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="arielfedele8.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://arielfedele8.github.io/MyWebPage/"
+    />
+    <meta name="twitter:title" content="Ariel Fedele" />
+    <meta name="twitter:description" content="Ciao sono Ariel, qui ci sono dettagli su di me ed i miei lavori" />
+    <meta
+      name="twitter:image"
+      content="https://github.com/ArielFedele8/MyWebPage/blob/dev/assets/img/og_pic.PNG?raw=true"
+    />
+
+    <!-- CSS Bootsrap e Bootstrap icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,6 +50,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+
+    <!-- CSS mio -->
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
@@ -27,7 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <!-- The cursor elements -->
+    <!-- Elementi del cursore -->
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
 
@@ -53,36 +87,67 @@
             >
               <ul class="navbar-nav">
                 <li class="nav-item mx-4">
-                  <a class="nav-link active" aria-current="page" href="" onclick="openNav(event)"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href=""
+                    onclick="openNav(event)"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#AboutMe" onclick="openNav(event)">Su di me</a>
+                  <a class="nav-link" href="#AboutMe" onclick="openNav(event)"
+                    >Su di me</a
+                  >
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#Projects" onclick="openNav(event)">Progetti</a>
+                  <a class="nav-link" href="#Projects" onclick="openNav(event)"
+                    >Progetti</a
+                  >
                 </li>
                 <li class="nav-item dropdown mx-4">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     Contattami
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="form.html">Email</a>
+                      <a class="dropdown-item" href="form.html" target="_blank"
+                        >Email</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="https://www.linkedin.com/in/ariel-fedele-a118b1268/">LinkedIn</a>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.linkedin.com/in/ariel-fedele-a118b1268/"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="https://github.com/ArielFedele8">GitHub</a>
+                      <a
+                        class="dropdown-item"
+                        href="https://github.com/ArielFedele8"
+                        target="_blank"
+                        >GitHub</a
+                      >
                     </li>
                     <li>
                       <hr class="dropdown-divider" />
                     </li>
                     <li>
-                      <a class="dropdown-item" href="https://www.instagram.com/_ariel_fedele/">Instagram</a>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.instagram.com/_ariel_fedele/"
+                        target="_blank"
+                        >Instagram</a
+                      >
                     </li>
                   </ul>
                 </li>
@@ -149,7 +214,7 @@
             <button
               type="button"
               class="btn btn-one py-2 py-lg-3 my-3"
-              onclick="window.open('/Curriculum.pdf'); return true;"
+              onclick="window.open('Curriculum.pdf'); return true;"
             >
               <span>Curriculum</span>
               <i class="bi bi-download px-1"></i>
@@ -220,14 +285,14 @@
               <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2">
                 <div class="work-box">
                   <a
-                    href=""
+                    href="assets/img/og_pic.PNG"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                   >
                     <div class="work-img">
                       <img
-                        src="https://picsum.photos/900/600"
-                        alt=""
+                        src="assets/img/og_pic.PNG"
+                        alt="Copertina sito"
                         class="img-fluid"
                       />
                     </div>
@@ -235,15 +300,15 @@
                   <div class="work-content">
                     <div class="row">
                       <div class="col-sm-8">
-                        <h2 class="w-title">Lorem impsum dolor</h2>
+                        <h2 class="w-title">Ariel Fedele</h2>
                         <div class="w-more">
-                          <span class="w-ctegory">Web Design</span> /
-                          <span class="w-date">18 Sep. 2018</span>
+                          <span class="w-ctegory">Web development</span> /
+                          <span class="w-date">21 Sep. 2023</span>
                         </div>
                       </div>
                       <div class="col-sm-4">
                         <div class="w-like">
-                          <a href="">
+                          <a href="https://arielfedele8.github.io/MyWebPage/">
                             <span class="bi bi-plus-circle"></span
                           ></a>
                         </div>
@@ -255,14 +320,14 @@
               <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2">
                 <div class="work-box">
                   <a
-                    href=""
+                    href="assets/img/donkeyKong.png"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                   >
                     <div class="work-img">
                       <img
-                        src="https://picsum.photos/900/600"
-                        alt=""
+                        src="assets/img/donkeyKongPic.png"
+                        alt="Copertina Donkey Kong"
                         class="img-fluid"
                       />
                     </div>
@@ -270,18 +335,13 @@
                   <div class="work-content">
                     <div class="row">
                       <div class="col-sm-8">
-                        <h2 class="w-title">Lorem impsum dolor</h2>
+                        <h2 class="w-title">Donkey Kong</h2>
                         <div class="w-more">
-                          <span class="w-ctegory">Web Design</span> /
-                          <span class="w-date">18 Sep. 2018</span>
+                          <span class="w-ctegory">Processing</span> /
+                          <span class="w-date">20 Apr. 2019</span>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="w-like">
-                          <a href="">
-                            <span class="bi bi-plus-circle"></span
-                          ></a>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -290,14 +350,14 @@
               <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2">
                 <div class="work-box">
                   <a
-                    href=""
+                    href="assets/img/Memory.PNG"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                   >
                     <div class="work-img">
                       <img
-                        src="https://picsum.photos/900/600"
-                        alt=""
+                        src="assets/img/MemoryPic.PNG"
+                        alt="Copertina Memory"
                         class="img-fluid"
                       />
                     </div>
@@ -305,18 +365,13 @@
                   <div class="work-content">
                     <div class="row">
                       <div class="col-sm-8">
-                        <h2 class="w-title">Lorem impsum dolor</h2>
+                        <h2 class="w-title">Memory</h2>
                         <div class="w-more">
-                          <span class="w-ctegory">Web Design</span> /
-                          <span class="w-date">18 Sep. 2018</span>
+                          <span class="w-ctegory">Android</span> /
+                          <span class="w-date">09 Nov. 2020</span>
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="w-like">
-                          <a href="">
-                            <span class="bi bi-plus-circle"></span
-                          ></a>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -325,14 +380,14 @@
               <div class="col-12 col-sm-6 col-lg-4 pt-5 px-5 p-sm-2">
                 <div class="work-box">
                   <a
-                    href=""
+                    href="assets/img/Approsimazione.PNG"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                   >
                     <div class="work-img">
                       <img
-                        src="https://picsum.photos/900/600"
-                        alt=""
+                        src="assets/img/ApprosimazionePic.png"
+                        alt="Copertina approsimazione"
                         class="img-fluid"
                       />
                     </div>
@@ -340,18 +395,13 @@
                   <div class="work-content">
                     <div class="row">
                       <div class="col-sm-8">
-                        <h2 class="w-title">Lorem impsum dolor</h2>
+                        <h2 class="w-title">Approsimazione</h2>
                         <div class="w-more">
-                          <span class="w-ctegory">Web Design</span> /
-                          <span class="w-date">18 Sep. 2018</span>
+                          <span class="w-ctegory">C++</span> /
+                          <span class="w-date">10 Dic. 2019</span>
                         </div>
                       </div>
-                      <div class="col-sm-4 d-flex justify-content-end">
-                        <div class="w-like">
-                          <a href="">
-                            <span class="bi bi-plus-circle"></span
-                          ></a>
-                        </div>
+                      <div class="col-sm-4">
                       </div>
                     </div>
                   </div>
@@ -372,21 +422,30 @@
             class="col-lg-4 col-md-6 col-8 justify-content-between list-unstyled d-flex"
           >
             <li>
-              <a href="form.html"><i class="bi bi-envelope-at"></i></a>
+              <a href="form.html" target="_blank"
+                ><i class="bi bi-envelope-at"></i
+              ></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/ariel-fedele-a118b1268/"><i class="bi bi-linkedin fa-2x"></i></a>
+              <a
+                href="https://www.linkedin.com/in/ariel-fedele-a118b1268/"
+                target="_blank"
+                ><i class="bi bi-linkedin fa-2x"></i
+              ></a>
             </li>
             <li>
-              <a href="https://github.com/ArielFedele8"><i class="bi bi-github fa-2x"></i></a>
+              <a href="https://github.com/ArielFedele8" target="_blank"
+                ><i class="bi bi-github fa-2x"></i
+              ></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/_ariel_fedele/"><i class="bi bi-instagram fa-2x"></i></a>
+              <a href="https://www.instagram.com/_ariel_fedele/" target="_blank"
+                ><i class="bi bi-instagram fa-2x"></i
+              ></a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-    
   </body>
 </html>

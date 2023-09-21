@@ -136,13 +136,51 @@ function cursore() {
 
 var pippo;
 
-function start(){
-  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+function start() {
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     cursore();
   }
   cliccaSkills();
-  
+
+
 }
+
+function sendMail() {
+
+  if (document.getElementById("name").value != "" &&
+    document.getElementById("email").value != "" &&
+    document.getElementById("message").value != "" &&
+    document.getElementById("invalidCheck").checked == true) {
+      
+    emailjs.init("yWCKH1wtPbUb5NEyu");
+
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+
+
+    const serviceID = "service_tx0kgsn";
+    const templateID = "template_qr3bs27";
+
+    emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        document.getElementById("invalidCheck").checked = false;
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+      })
+      .catch(err => console.log(err));
+  }
+
+}
+
+
 
 window.onload = start;
 

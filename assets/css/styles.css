@@ -226,6 +226,11 @@ main #AboutMe {
     padding: 0px;
   }
 }
+main #AboutMe img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
 main #AboutMe h3,
 main #AboutMe h2 {
   color: #0f8852;

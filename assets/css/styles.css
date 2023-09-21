@@ -306,6 +306,7 @@ main #AboutMe .btn-one {
   color: #0f8852;
   transition: all 0.3s;
   position: relative;
+  font-size: 25px;
 }
 main #AboutMe .btn-one span {
   transition: all 0.3s;
@@ -378,6 +379,7 @@ main #Projects .work-box {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  border: solid 1px;
 }
 main #Projects .work-box:hover img {
   transform: scale(1.3);

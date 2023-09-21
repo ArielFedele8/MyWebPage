@@ -343,6 +343,7 @@ main {
       color: $coloreScrittePrimo;
       transition: all 0.3s;
       position: relative;
+      font-size: 25px;
     }
     .btn-one span {
       transition: all 0.3s;
@@ -412,11 +413,14 @@ main {
       }
     }
 
+
     .work-box {
       margin-bottom: 3rem;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       background-color: #fff;
+      border: solid 1px;
+      
     }
 
     .work-box:hover img {
@@ -471,7 +475,7 @@ main {
 
 footer {
   div {
-    color: white;
+    color: $coloreScritteSecondo;
   }
 }
 
